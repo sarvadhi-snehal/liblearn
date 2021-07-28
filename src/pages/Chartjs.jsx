@@ -2,27 +2,42 @@ import React from "react";
 import { Bar,Line, Radar, Doughnut, Pie, PolarArea ,Bubble,Scatter} from "react-chartjs-2";
 import './Chartjs.scss'
 const data = {
-  labels: ["1", "2", "3", "4", "5", "6","7"],
+  labels: ["1", "2", "3", "4"],
   datasets: [
     {
-      label: "# of Red Votes",
-      data: [12, 19, 3, 5, 2, 3,5],
+      label: "No",
+      data: [12, 19, 3, 5,],
       backgroundColor: "rgb(255, 99, 132)",
     },
     {
-      label: "# of Blue Votes",
-      data: [2, 3, 20, 5, 1, 4,6],
+      label: "Yet to Decide",
+      data: [2, 3, 20, 5],
       backgroundColor: "rgb(54, 162, 135)",
     },
     {
-      label: "# of Green Votes",
-      data: [3, 10, 13, 15, 22, 30,50],
+      label: "Yes",
+      data: [3, 10, 13, 15],
       backgroundColor: "rgb(75, 192, 192)",
     },
   ],
 };
 
 const options = {
+  animations: {
+    tension: {
+      duration: 500,
+      easing: 'linear',
+      from: 1,
+      to: 0,
+      loop: true
+    }
+  },
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top',
+    }
+  },
   scales: {
     yAxes: [
       {
