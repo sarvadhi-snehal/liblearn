@@ -1,6 +1,7 @@
 import React from "react";
 import { Bar,Line, Radar, Doughnut, Pie, PolarArea ,Bubble,Scatter} from "react-chartjs-2";
-import './Chartjs.scss'
+import Navbar from "../Componets/Navbar/Navbar"
+// import './Chartjs.scss'
 const data = {
   labels: ["1", "2", "3", "4"],
   datasets: [
@@ -57,6 +58,7 @@ const options = {
 function Chartjs() {
   return (
     <div className="chartContainer">
+      <Navbar />
       <div className="header">
         <h1 className="title">Stacked Bar Chart</h1>
       <Bar className="chartBar" data={data} options={options} responsive="true" />
