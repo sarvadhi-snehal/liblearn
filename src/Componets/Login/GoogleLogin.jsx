@@ -5,10 +5,11 @@ import { logIn} from '../../redux/actions'
 import { useHistory} from 'react-router-dom'
 
 function GoogleSignin() {
+  
   const history = useHistory();
 const dispatch = useDispatch()
   const responseGoogle = (response) => {
-    
+    console.log(response)
     dispatch(logIn())
     history.push({
       pathname:'/chart'

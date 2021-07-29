@@ -3,7 +3,10 @@ import { GoogleLogout } from "react-google-login";
 import { useHistory } from "react-router-dom"
 import {useDispatch} from "react-redux";
 import { logOut} from '../../redux/actions'
+import { FiLogOut} from 'react-icons/Fi'
+import './Logout.scss'
 function Logout() {
+    let clientId = import.meta.env.client_id
     const history = useHistory();
     const dispatch = useDispatch();
   const responseGoogle = () => {
@@ -15,7 +18,13 @@ function Logout() {
   return (
     <>
       <GoogleLogout
-        clientId="962281289281-o8jti4ni3imnsljch6j4i4pqp6ppb4mb.apps.googleusercontent.com"
+        clientId={clientId}
+        render={renderProps => (
+            <p onClick={renderProps.onClick} 
+                disabled={renderProps.disabled}
+                className=" btnOut m-3"
+                > <FiLogOut /> log out</p>
+          )}
         buttonText="Logout"
         onLogoutSuccess={responseGoogle}
       ></GoogleLogout>

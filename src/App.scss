@@ -1,5 +1,12 @@
+@import "./custome.scss";
+
+
 .App {
   text-align: center;
+  animation: 5s ease-in 1s infinite reverse both running slidein;
 }
 
-@import "./custome.scss";
+.dark-mode{
+  filter: invert(1);
+  background-color: white;
+  }

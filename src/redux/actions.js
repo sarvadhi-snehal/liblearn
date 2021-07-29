@@ -1,4 +1,4 @@
-import { LOG_OUT,LOG_IN} from './actionTypes';
+import { LOG_OUT,LOG_IN, DARK_MODE} from './actionTypes';
 
 export const logIn = () =>{
     return{
@@ -13,5 +13,11 @@ export const logOut = () =>{
         type: LOG_OUT,
         info: 'User Log Out',
         
+    }
+}
+export const darkMode = () =>{
+    return{
+        type : DARK_MODE,
+        info : 'convert to dark mode',
     }
 }
