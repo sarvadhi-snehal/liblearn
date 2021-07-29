@@ -13,3 +13,12 @@ The page will reload if you make edits. You will also see any lint errors in the
 Learn More You can learn more in the vite@latest. Learn more for pnpm [https://pnpm.io/installation]
 
 To learn React, check out the React documentation.
+
+#depenancy i used
+ - react-bootstap
+ - bootstrap
+ - react-reveal
+ - react-icons
+ - react-chartjs-2
+ - react-google-login
+ - react-animate-on-scroll
